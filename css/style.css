@@ -41,6 +41,10 @@ div.container{
     border: 2px black solid;
 }
 
+div.cells span{
+    font-weight: bold;
+}
+
 .cells{
     width: calc( 100% / 10);
     height: calc( 100% / 10);
@@ -49,4 +53,3 @@ div.container{
     justify-content: center;
     align-items: center;
 }
-
