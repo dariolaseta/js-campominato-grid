@@ -1,6 +1,7 @@
 const gridElement = document.getElementById("grid");
-const button = document.getElementById("button")
+const button = document.getElementById("button");
 let isCreated = false;
+let canReset = false;
 
 button.addEventListener("click", function(){
     gridElement.classList.add("container");
@@ -11,11 +12,16 @@ button.addEventListener("click", function(){
             
             newCell.addEventListener("click", function(){
                 toggleBackground(newCell);
+                canReset = true;
             });
 
             gridElement.append(newCell);
         }
         isCreated = true;
+    }
+    if(canReset){
+        reset();
+        
     }
 });
 
@@ -28,5 +34,16 @@ function createCell(cellNumber) {
 
 function toggleBackground(item){
     console.log(item.textContent);
+    canReset = true;
     item.classList.toggle("selected");
+}
+
+function reset(){
+    let selectedCells = document.getElementsByClassName("selected");
+
+    while(selectedCells.length){
+        selectedCells[0].classList.remove("selected");
+        canReset = false;
+    }
+
 }
