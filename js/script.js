@@ -27,5 +27,6 @@ function createCell(cellNumber) {
 }
 
 function toggleBackground(item){
+    console.log(item.textContent);
     item.classList.toggle("selected");
 }
