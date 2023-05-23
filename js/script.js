@@ -9,11 +9,14 @@ button.addEventListener("click", function(){
         for (let i = 0; i < 100; i++) {
             const newCell = createCell(i);
             
+            newCell.addEventListener("click", function(){
+                toggleBackground(newCell);
+            });
+
             gridElement.append(newCell);
         }
         isCreated = true;
     }
-
 });
 
 function createCell(cellNumber) {
@@ -21,4 +24,8 @@ function createCell(cellNumber) {
     cell.classList.add("cells");
     cell.innerHTML = `<span>${cellNumber + 1}</span>`;
     return cell;
+}
+
+function toggleBackground(item){
+    item.classList.toggle("selected");
 }
