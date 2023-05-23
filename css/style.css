@@ -10,8 +10,13 @@ header ul{
     list-style-type: none;
 }
 
-header ul li{
+header ul li,
+footer p{
     margin: 2rem;
+}
+
+footer p{
+    font-size: 1.3rem;
 }
 
 main{
