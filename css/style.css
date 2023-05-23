@@ -3,3 +3,17 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+header ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+header ul li{
+    margin: 2rem;
+}
+
+button{
+    padding: 0 3rem;
+}
